@@ -34,3 +34,14 @@ class QueueMetric(BaseModel):
 
     class Config:
         from_attributes = True
+
+
+class AlertOut(BaseModel):
+    alert_id: int
+    timestamp: datetime
+    node_id: int
+    alert_type: str
+    resolved_status: bool
+
+    class Config:
+        from_attributes = True
